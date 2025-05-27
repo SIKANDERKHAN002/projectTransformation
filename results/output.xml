@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-05-22T00:43:41.048776" rpa="false" schemaversion="5">
+<suite id="s1" name="TC003 swagLabs ValidateSwagText" source="d:\cacpl-automation-ebi\testCases\TC003_swagLabs_ValidateSwagText.robot">
+<test id="s1-t1" name="TC003_swagLabs_ValidateSwagText" line="41">
+<kw name="TC003_swagLabs_ValidateSwagText">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-22T00:43:41.312482" level="INFO">Action1 : Login to SwagLabs application</msg>
+<arg>Action1 : Login to SwagLabs application</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-22T00:43:41.311506" elapsed="0.000976"/>
+</kw>
+<kw name="swagLabsLogin" owner="swagLabs">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login into orangeHrm application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-22T00:43:41.313458" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-22T00:43:41.314492" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${swagLabsUrl}</arg>
+<arg>${browserChrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-22T00:43:41.313458" elapsed="13.042043"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-22T00:44:04.356897" level="INFO">Slept 10 seconds.</msg>
+<arg>${waitTime}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-22T00:43:54.356478" elapsed="10.000419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T00:44:04.357923" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>${swagLabsUserNameLocator}</arg>
+<arg>${swagLabsUserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.356897" elapsed="0.096830"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T00:44:04.455677" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>${swagLabsPasswordLocator}</arg>
+<arg>${swagLabsPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.454701" elapsed="0.070221"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T00:44:04.525897" level="INFO">Clicking button 'login-button'.</msg>
+<arg>${swagLabsSubmitButtonLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.524922" elapsed="0.079095"/>
+</kw>
+<arg>swagLabsUrl=${swagLabsUrl}</arg>
+<arg>swagLabsUserName=${swagUserName}</arg>
+<arg>swagLabsPassword=${swagPassword}</arg>
+<doc>This keyword is used for login purpose to orange hrm website</doc>
+<status status="PASS" start="2025-05-22T00:43:41.312482" elapsed="23.291535"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-22T00:44:04.605524" level="INFO">Result1 : Login to SwagLabs application successfull</msg>
+<arg>Result1 : Login to SwagLabs application successfull</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.604017" elapsed="0.002495"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-22T00:44:04.606512" level="INFO">Action2 : Validate SwagLabs text on screen</msg>
+<arg>Action2 : Validate SwagLabs text on screen</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.606512" elapsed="0.000974"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-22T00:44:14.609199" level="INFO">Slept 10 seconds.</msg>
+<arg>${waitTime}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-22T00:44:04.607486" elapsed="10.001713"/>
+</kw>
+<kw name="swagLabsValidateTextOnScreen" owner="swagLabs">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-22T00:44:14.621934" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>${textForValidation}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-22T00:44:14.610182" elapsed="0.012729"/>
+</kw>
+<arg>textForValidation=${textSwagLabs}</arg>
+<doc>This keyword will validate text on landing page</doc>
+<status status="PASS" start="2025-05-22T00:44:14.610182" elapsed="0.012729"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-22T00:44:14.622911" level="INFO">Result2 : Validated SwagLabs text on screen successfull</msg>
+<arg>Result2 : Validated SwagLabs text on screen successfull</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-22T00:44:14.622911" elapsed="0.000000"/>
+</kw>
+<arg>${swagLabsUrl}</arg>
+<arg>${swagUserName}</arg>
+<arg>${swagPassword}</arg>
+<doc>This keyword will login into SwagLabs</doc>
+<status status="PASS" start="2025-05-22T00:43:41.310531" elapsed="33.312380"/>
+</kw>
+<tag>Login</tag>
+<tag>regression</tag>
+<tag>swag</tag>
+<tag>swagLabs</tag>
+<tag>UserManagement</tag>
+<timeout value="1 minute"/>
+<status status="PASS" start="2025-05-22T00:43:41.310531" elapsed="33.312380"/>
+</test>
+<doc>TC003_swagLabs_ValidateSwagText</doc>
+<meta name="1) Test Description">The test case is used to login into SwagLabs application</meta>
+<meta name="2) Prerequisites">None</meta>
+<meta name="3) Test Steps">The following test steps will be executed by this test case:
+
+Action1 :  Login to swagLabs application
+
+Result1 :  Login to swagLabs application successfull
+
+
+Action2 :  Validate swagLabs text on screen
+
+Result2 :  Validated swagLabs text on screen successfull
+
+</meta>
+<meta name="4) Test Case ID">TC003</meta>
+<meta name="5) Version">1.0</meta>
+<meta name="6) Author">Robot Framework</meta>
+<meta name="7) Approver Robot Framework"/>
+<meta name="8) Modified">2025-05-21</meta>
+<meta name="9) Comments"/>
+<status status="PASS" start="2025-05-22T00:43:41.050281" elapsed="33.574139"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">swag</stat>
+<stat pass="1" fail="0" skip="0">swagLabs</stat>
+<stat pass="1" fail="0" skip="0">UserManagement</stat>
+</tag>
+<suite>
+<stat name="TC003 swagLabs ValidateSwagText" id="s1" pass="1" fail="0" skip="0">TC003 swagLabs ValidateSwagText</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
