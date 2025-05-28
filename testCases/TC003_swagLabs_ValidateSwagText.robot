@@ -23,9 +23,9 @@ Metadata         8) Modified       2025-05-21
 Metadata         9) Comments
 
 
-Test Tags       swag    regression  Login  UserManagement
-Resource        ../resources/common.resource
-Library         DataDriver   file=../testData/defaultBrowserData.csv
+Test Tags        swag    regression  Login  UserManagement
+Resource         ../resources/common.resource
+Library          DataDriver   file=../testData/defaultBrowserData.csv
 Test Timeout     ${testTimeout}
 
 Test Template   TC003_swagLabs_ValidateSwagText

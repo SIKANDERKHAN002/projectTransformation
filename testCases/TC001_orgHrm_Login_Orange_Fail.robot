@@ -21,7 +21,7 @@ Metadata         9) Comments
 
 
 Resource  ../resources/common.resource
-Library         DataDriver   file=../testData/defaultBrowserData.csv
+Library          DataDriver   file=../testData/defaultBrowserData.csv
 
 
 Test Teardown   Close All Browsers
