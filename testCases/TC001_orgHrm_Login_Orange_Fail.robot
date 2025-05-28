@@ -21,7 +21,6 @@ Metadata         9) Comments
 
 
 Resource  ../resources/common.resource
-Resource  ../resources/lab/labConfiguration.resource
 Library         DataDriver   file=../testData/defaultBrowserData.csv
 
 
