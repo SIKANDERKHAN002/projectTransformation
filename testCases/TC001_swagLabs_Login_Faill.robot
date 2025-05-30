@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   TC001_swagLabs_Login_Fail
+Documentation   TC001_swagLabs_Login_Faill
 ...
 Metadata         1) Test Description
 ...                 The test case is used to login into swagLabs application and fail
@@ -27,7 +27,7 @@ Resource  ../resources/common.resource
 Library         DataDriver   file=../testData/defaultBrowserData.csv
 
 Test Timeout    ${testTimeout}
-Test Template   TC001_swagLabs_Login_Fail_Template
+Test Template   TC001_swagLabs_Login_Faill_Template
 Test Tags       swag   regression    Login   Fail
 
 *** Variables***
@@ -35,13 +35,13 @@ ${swagInvalidCredentials}    Epic sadface: Username and password do not match an
 ${testCaseId}                TC001
 
 *** Test Cases ***
-TC001_swagLabs_Login_Fail_${defaultBrowsers} 
+TC001_swagLabs_Login_Faill_${defaultBrowsers} 
 [Documentation]    This test case will login into swagLabs application and fail
    
 
 
 *** Keywords ***
-TC001_swagLabs_Login_Fail_Template
+TC001_swagLabs_Login_Faill_Template
    [Documentation]    This keyword will login into orangeHrm
    ...
    ...  === Arguments ===
@@ -68,7 +68,7 @@ TC001_swagLabs_Login_Fail_Template
    Sleep   ${waitTime}
    #Validate invalid text on screen  
    swagLabs.swagLabsValidateInvalidText
-   ...      textForValidation=${swagInvalidCredentials}   
+   ...      textForValidation=${swagInvalidCredentials   
    
    Log    Result2 : Validate invalid text on screen successfull
    
